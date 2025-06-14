@@ -16,6 +16,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Separator } from "@/components/ui/separator"
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
   activeTab: string
@@ -55,7 +56,9 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
         </div>
         <div className="mt-4 text-base font-bold text-black text-center">Admin Dashboard</div>
 
-        <div className="mt-6 flex items-center gap-3 p-2 rounded-lg bg-muted/50">
+        <Separator className="my-4" />
+
+        <div className="flex items-center gap-3 p-2 rounded-lg bg-muted/50">
           <Avatar className="h-8 w-8">
             <AvatarFallback className="bg-green-500 text-white text-xs">NV</AvatarFallback>
           </Avatar>
@@ -92,7 +95,9 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="p-4">
+      <Separator className="mx-4 mb-2" />
+
+      <SidebarFooter className="px-4 pb-2 pt-2">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
