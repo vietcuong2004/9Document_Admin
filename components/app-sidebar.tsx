@@ -54,7 +54,7 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
           <span className="text-2xl font-bold italic text-orange-500">9</span>
           <span className="text-2xl font-bold italic text-green-500">Document</span>
         </div>
-        <div className="mt-4 text-base font-bold text-black text-center">Admin Dashboard</div>
+        <div className="mt-4 text-xl font-bold text-black text-center">Admin Dashboard</div>
 
         <Separator className="my-4" />
 
