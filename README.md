@@ -1,4 +1,4 @@
-# Typescript web admin
+# 9Document - Giao diện Admin
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
