@@ -1,30 +1,27 @@
-# 9Document - Giao diện Admin
+# 🚀 Hướng Dẫn Khởi Chạy Dự Án
+- Link deploy của web:  https://tuong-tac-nguoi-may-gold.vercel.app/
+- Dự án này được phát triển bằng TypeScript và Next.js. Sau khi clone về, bạn thực hiện các bước sau để chạy thử:
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+---
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vietcuong2004s-projects/v0-typescript-web-admin)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/KRBTFYvquKl)
+## 📥 Bước 1: Clone dự án
 
-## Overview
+```bash
+git clone https://github.com/duongfjd/TuongTacNguoiMay.git
+cd TuongTacNguoiMay
+```
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 📦 Bước 2: Cài đặt thư viện
+Chạy lệnh sau để cài đặt và xử lý lỗi phụ thuộc:
+```bash
+npm install --legacy-peer-deps
+```
+## ▶️ Bước 3: Chạy thử dự án
+- Sau khi cài đặt xong, chạy lệnh sau để khởi động:
+```bash
+npm run dev
+```
+- Follow theo link để chạy web:
 
-## Deployment
+<div align="center"> <img src="https://github.com/user-attachments/assets/565624d3-4cbb-4eca-88c8-5cc95053ca6a" alt="demo" /> </div>
 
-Your project is live at:
-
-**[https://vercel.com/vietcuong2004s-projects/v0-typescript-web-admin](https://vercel.com/vietcuong2004s-projects/v0-typescript-web-admin)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/KRBTFYvquKl](https://v0.dev/chat/projects/KRBTFYvquKl)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
