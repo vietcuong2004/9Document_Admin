@@ -83,6 +83,9 @@ const newUsers: UserItem[] = [
 export function OverviewTab() {
   return (
     <div className="space-y-6">
+      <div className="h-16 shrink-0 items-center gap-2 px-6 pt-6 -mt-6 -mx-6">
+        <h1 className="text-2xl font-bold">Tổng quan</h1>
+      </div>
       {/* Statistics Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <StatCard

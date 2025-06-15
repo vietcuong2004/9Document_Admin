@@ -12,7 +12,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarRail,
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
@@ -47,7 +46,7 @@ const menuItems = [
 
 export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps) {
   return (
-    <Sidebar className="bg-white border-r w-52" {...props}>
+    <Sidebar className="bg-white w-52" {...props}>
       <SidebarHeader className="p-2">
         <div className="flex items-center justify-center">
           <span className="text-lg font-bold italic text-orange-500">9</span>
@@ -78,13 +77,13 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
                     asChild
                     className={
                       activeTab === item.id
-                        ? "bg-green-500 text-white hover:bg-green-500 font-bold text-xs px-2 py-1.5"
-                        : "hover:bg-gray-100 text-xs px-2 py-1.5"
+                        ? "bg-green-500 text-white hover:bg-green-500 font-bold text-sm px-3 py-2"
+                        : "hover:bg-gray-100 text-sm px-3 py-2"
                     }
                   >
                     <button className="w-full" onClick={() => onTabChange(item.id)}>
-                      <item.icon className="h-3.5 w-3.5 flex-shrink-0" />
-                      <span className="truncate">{item.title}</span>
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
                     </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -99,9 +98,9 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
-                <button className="w-full text-red-600 hover:text-red-700 hover:bg-red-50 text-xs px-2 py-1.5">
-                  <LogOut className="h-3.5 w-3.5 flex-shrink-0" />
-                  <span className="truncate">Đăng xuất</span>
+                <button className="w-full text-red-600 hover:text-red-700 hover:bg-red-50 text-sm px-3 py-2">
+                  <LogOut className="h-4 w-4" />
+                  <span>Đăng xuất</span>
                 </button>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -109,7 +108,6 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
         </div>
       </SidebarContent>
 
-      <SidebarRail />
     </Sidebar>
   )
 }
