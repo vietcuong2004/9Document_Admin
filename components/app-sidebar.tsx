@@ -6,7 +6,6 @@ import { BarChart3, FileText, Users, Home, LogOut } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
@@ -48,28 +47,28 @@ const menuItems = [
 
 export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps) {
   return (
-    <Sidebar className="bg-white border-r" {...props}>
-      <SidebarHeader className="p-4">
+    <Sidebar className="bg-white border-r w-52" {...props}>
+      <SidebarHeader className="p-2">
         <div className="flex items-center justify-center">
-          <span className="text-2xl font-bold italic text-orange-500">9</span>
-          <span className="text-2xl font-bold italic text-green-500">Document</span>
+          <span className="text-lg font-bold italic text-orange-500">9</span>
+          <span className="text-lg font-bold italic text-green-500">Document</span>
         </div>
-        <div className="mt-4 text-xl font-bold text-black text-center">Admin Dashboard</div>
+        <div className="mt-2 text-lg font-bold text-black text-center">Admin Dashboard</div>
 
-        <Separator className="my-4" />
+        <Separator className="mx-0 my-2" />
 
-        <div className="flex items-center gap-3 p-2 rounded-lg bg-muted/50">
-          <Avatar className="h-8 w-8">
+        <div className="flex items-center gap-2 p-1.5 rounded-lg bg-muted/50">
+          <Avatar className="h-6 w-6">
             <AvatarFallback className="bg-green-500 text-white text-xs">NV</AvatarFallback>
           </Avatar>
-          <div className="flex flex-col">
-            <span className="text-sm font-medium">Nguyễn Văn A</span>
-            <span className="text-xs text-muted-foreground">admin@example.com</span>
+          <div className="flex flex-col min-w-0 flex-1">
+            <span className="text-xs font-medium truncate">Nguyễn Văn A</span>
+            <span className="text-xs text-muted-foreground truncate">admin@example.com</span>
           </div>
         </div>
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="pb-1">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -79,13 +78,13 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
                     asChild
                     className={
                       activeTab === item.id
-                        ? "bg-green-500 text-white hover:bg-green-500 font-bold"
-                        : "hover:bg-gray-100"
+                        ? "bg-green-500 text-white hover:bg-green-500 font-bold text-xs px-2 py-1.5"
+                        : "hover:bg-gray-100 text-xs px-2 py-1.5"
                     }
                   >
                     <button className="w-full" onClick={() => onTabChange(item.id)}>
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
+                      <item.icon className="h-3.5 w-3.5 flex-shrink-0" />
+                      <span className="truncate">{item.title}</span>
                     </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -93,22 +92,22 @@ export function AppSidebar({ activeTab, onTabChange, ...props }: AppSidebarProps
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        <Separator className="mx-0 my-1.5" />
+
+        <div className="px-2">
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild>
+                <button className="w-full text-red-600 hover:text-red-700 hover:bg-red-50 text-xs px-2 py-1.5">
+                  <LogOut className="h-3.5 w-3.5 flex-shrink-0" />
+                  <span className="truncate">Đăng xuất</span>
+                </button>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </div>
       </SidebarContent>
-
-      <Separator className="mx-4 mb-2" />
-
-      <SidebarFooter className="px-4 pb-2 pt-2">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <button className="w-full text-red-600 hover:text-red-700 hover:bg-red-50">
-                <LogOut className="h-4 w-4" />
-                <span>Đăng xuất</span>
-              </button>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarFooter>
 
       <SidebarRail />
     </Sidebar>
